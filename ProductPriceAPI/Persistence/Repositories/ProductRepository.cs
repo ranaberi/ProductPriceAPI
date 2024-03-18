@@ -29,7 +29,8 @@ namespace ProductPriceAPI.Persistence.Repositories
                         ProductPrices = p.ProductPrices.Select(pp => new ProductPriceDto
                         {
                             Price = pp.Price,
-                            RetailerName = pp.Retailer.Name
+                            RetailerName = pp.Retailer.Name,
+                            RetailerId = pp.RetailerId
                         }).ToList()
                     })
                     .SingleOrDefaultAsync();
