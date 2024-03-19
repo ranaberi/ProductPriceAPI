@@ -1,4 +1,5 @@
 ﻿using ProductPriceAPI.DTOs;
+using ProductPriceAPI.Repositories.Communication;
 
 namespace ProductPriceAPI.Repositories
 {
@@ -9,5 +10,6 @@ namespace ProductPriceAPI.Repositories
 
         Task<IEnumerable<RetailerDto>> ListCompetitorsForProductAsync(string ean);
         Task<decimal> GetPriceRecommendationForProductAsync(string ean);
+        
     }
 }
